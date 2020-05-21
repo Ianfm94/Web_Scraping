@@ -3,7 +3,6 @@
 # Importing requisite packages
 import pandas as pd
 from bs4 import BeautifulSoup
-import re
 from selenium import webdriver
 import chromedriver_binary
 
@@ -18,4 +17,3 @@ soup = BeautifulSoup(html,'lxml')
 
 close_price_2 = [entry.text for entry in soup.find_all('span', {'data-reactid':'61'})]
 print(close_price_2)
-
